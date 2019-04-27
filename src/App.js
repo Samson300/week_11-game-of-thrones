@@ -17,18 +17,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid m-0 p-0">
-        <div className="App">
-          <header className="App-header">
-            Game Of Thrones
-          </header>
+      <div className="container-fluid">
+        <div class="jumbotron jumbotron-fluid p-4 text-center m-0">
+          <div class="container">
+            <h1 class="display-4">Game Of Thrones</h1>
+          </div>
         </div>
         <div className="row">
-          <div className="bg-dark w-25 overflow-auto sidebar">
+          <div className="w-25 overflow-auto sidebar">
             <SearchBar handleChange={this._setInput} />
             <CharacterList search={this.state.inputText} characters={characters} handleClick={this._buttonClicked} />
           </div>
-          <div className="bg-info w-75">
+          <div className="w-75">
           {
             this.state.charIndex !== '' ? <CharacterDetail character={characters[this.state.charIndex]} /> : null
           }

@@ -7,19 +7,15 @@ import propTypes from 'prop-types';
 
 function CharacterList(props) {
     return (
-        <ul className="list">
+        <div className="list-group align-items-center">
             {   
-                
                 Object.values(props.characters.map((char, i) => {
                     if (char.name.toLowerCase().includes(props.search)) {
-                        return <li key={i}>
-                                    <button onClick={() => { props.handleClick(i) }
-                                    }>{char.name}</button>
-                                </li>
+                        return <button className="list-group-item-action" key={i} onClick={() => { props.handleClick(i) }}>{char.name}</button>
                     } 
                 }))
             }
-        </ul>
+        </div>
     )
 }
 

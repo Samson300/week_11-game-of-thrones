@@ -10,12 +10,13 @@ import propTypes from 'prop-types';
 
 function CharacterDetail(props) {
     return (
-        <div className="">
-            <ul className="list">
-                <li>Name: {props.character.name}</li>
-                <li>Aliases: {props.character.aliases}</li>
-                <li>Born: {props.character.born}</li>
-                <li>Titles: {props.character.titles}</li>
+        <div>
+            <ul className="list-group detail">
+                <li className="list-group-item border-0">Name: {props.character.name}</li>
+                <li className="list-group-item border-0">Aliases: {props.character.aliases}</li>
+                <li className="list-group-item border-0">Born: {props.character.born}</li>
+                <li className="list-group-item border-0">Died: {props.character.died}</li>
+                <li className="list-group-item border-0">Titles: {props.character.titles}</li>
             </ul>
         </div>
     )
