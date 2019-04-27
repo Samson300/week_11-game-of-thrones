@@ -12,11 +12,11 @@ function CharacterDetail(props) {
     return (
         <div>
             <ul className="list-group detail">
-                <li className="list-group-item border-0">Name: {props.character.name}</li>
-                <li className="list-group-item border-0">Aliases: {props.character.aliases}</li>
-                <li className="list-group-item border-0">Born: {props.character.born}</li>
-                <li className="list-group-item border-0">Died: {props.character.died}</li>
-                <li className="list-group-item border-0">Titles: {props.character.titles}</li>
+                <li className="list-group-item border-0"><strong>Name: </strong>{props.character.name}</li>
+                <li className="list-group-item border-0"><strong>Aliases: </strong>{props.character.aliases}</li>
+                <li className="list-group-item border-0"><strong>Born: </strong>{props.character.born}</li>
+                <li className="list-group-item border-0"><strong>Died: </strong>{props.character.died}</li>
+                <li className="list-group-item border-0"><strong>Titles: </strong>{props.character.titles}</li>
             </ul>
         </div>
     )
