@@ -3,9 +3,13 @@
 }
 
 .sidebar {
-  max-height: 700px;
+  max-height: 580px;
 }
 
 .list-group-item-action {
   width: 80%; 
+}
+
+.searchbar {
+  margin: 10px;
 }

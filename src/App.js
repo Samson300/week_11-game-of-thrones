@@ -23,9 +23,9 @@ class App extends React.Component {
             <h1 class="display-4">Game Of Thrones</h1>
           </div>
         </div>
+            <SearchBar handleChange={this._setInput} />
         <div className="row">
           <div className="w-25 overflow-auto sidebar">
-            <SearchBar handleChange={this._setInput} />
             <CharacterList search={this.state.inputText} characters={characters} handleClick={this._buttonClicked} />
           </div>
           <div className="w-75">
