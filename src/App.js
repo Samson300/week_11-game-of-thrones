@@ -4,12 +4,14 @@ import './App.css';
 import characters from './characters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import SearchBar from './SearchBar';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      charIndex: ''
+      charIndex: '',
+      inputText: ''
     }
   }
 
@@ -22,8 +24,9 @@ class App extends React.Component {
           </header>
         </div>
         <div className="row">
-          <div className="bg-dark w-25 overflow-auto">
-            <CharacterList characters={characters} handleClick={this._buttonClicked} />
+          <div className="bg-dark w-25 overflow-auto sidebar">
+            <SearchBar handleChange={this._setInput} />
+            <CharacterList search={this.state.inputText} characters={characters} handleClick={this._buttonClicked} />
           </div>
           <div className="bg-info w-75">
           {
@@ -41,6 +44,12 @@ class App extends React.Component {
       charIndex
     })
   }  
+
+  _setInput = (inputText) => {
+    this.setState({
+      inputText
+    })
+  }
 }
 
 export default App;

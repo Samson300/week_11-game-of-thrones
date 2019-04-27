@@ -12,10 +12,10 @@ function CharacterDetail(props) {
     return (
         <div className="">
             <ul className="list">
-                <li>Name: {props.name}</li>
-                <li>Aliases: {props.aliases}</li>
-                <li>Born: {props.born}</li>
-                <li>Titles: {props.titles}</li>
+                <li>Name: {props.character.name}</li>
+                <li>Aliases: {props.character.aliases}</li>
+                <li>Born: {props.character.born}</li>
+                <li>Titles: {props.character.titles}</li>
             </ul>
         </div>
     )

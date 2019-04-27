@@ -8,12 +8,15 @@ import propTypes from 'prop-types';
 function CharacterList(props) {
     return (
         <ul className="list">
-            {
+            {   
+                
                 Object.values(props.characters.map((char, i) => {
-                    return <li key={i}>
-                                <button onClick={() => { props.handleClick(i) }
-                                }>{char.name}</button>
-                            </li>;
+                    if (char.name.toLowerCase().includes(props.search)) {
+                        return <li key={i}>
+                                    <button onClick={() => { props.handleClick(i) }
+                                    }>{char.name}</button>
+                                </li>
+                    } 
                 }))
             }
         </ul>

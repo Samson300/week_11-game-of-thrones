@@ -15,6 +15,10 @@
   list-style: none;
 }
 
+.sidebar {
+  height: 800px;
+}
+
 .App-link {
   color: #61dafb;
 }
